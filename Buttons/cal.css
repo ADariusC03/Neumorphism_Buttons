@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #e9e9e9;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+}
+
+/* ----------------------------------------------------------*/
+/* ------------------ box-shadow = var(); -------------------*/
+/* helps make the background come to life with ox shadowing*/
+:root{
+  --shadow: 0 0 1rem 0 rgba(0,0,0,.15);
+}
+
+:root{
+  --box: inset 0 0 1rem 0 rgba(0,0,0,0.7);
+} 
+/* ----------------------------------------------------------*/
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  border-radius: 30px;
+}
+
+
+input, button{
+  outline: none;
+}
+
+/*works on firefox and chrome*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+}
+/*works on safari*/
+input[type="number"]{
+  -moz-appearance: textfield;
+}
+
+input{
+  box-shadow: var(--box);
+  width: 320px;
+  height: 60px;
+  padding: 16px 32px;
+  text-align: right;/*have the value postion right*/
+  border: none;
+  border-radius: 30px;
+  text-shadow: -1px -1px 2px #fff, 2px 2px 2px rgba(#000, 0.4);
+
+} 
+
+.keys{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.8rem;
+  margin-top: 20px;
+}
+
+button{
+  box-shadow: var(--shadow);
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 30px;/*makes the button cirles round*/
+  cursor: pointer;
+}
+
+button:hover,button:active{
+  background-color: #ccc;
+}
+button:active{
+  box-shadow: var(--box);
+}
+
+.op__key,
+.eq__key{
+  color: #31bde7;
+}
